@@ -9,6 +9,10 @@ The ui and logic are reduced to minimal, just to show Minimum viable technology 
 * Autolayout: SnapKit
 
 ## How to run
+```
+cd iOSMVT
+carthage bootstrap --platform iOS
+```
 
 ## Resource
 * Icon https://iconmonstr.com
