@@ -8,16 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: C4MVTBaseController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    static fileprivate var count: Int = 0
+
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        navBarType = .normal
+        ViewController.count += 1
+        navBarTitle = "Title \(ViewController.count)"
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
 

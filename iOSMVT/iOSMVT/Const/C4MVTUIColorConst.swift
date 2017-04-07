@@ -10,9 +10,11 @@ import UIKit
 
 extension UIColor {
 
-    static let UI_blue = UIColor(rgbValue: 0x006dcc)
+    static let UI_blue = UIColor(rgbValue: 0x4cb5f5)
     static let UI_boundry = UIColor(rgbValue: 0xe7e7e7)
+    static let UI_darkBoundry = UIColor(rgbValue: 0xcccccc)
     static let UI_background = UIColor(rgbValue: 0xf3f4f5)
+    static let UI_navBackground = UIColor(rgbValue: 0xf6f6f7)
 
     // MARK: - Funtions
     convenience init(rgbValue: UInt) {

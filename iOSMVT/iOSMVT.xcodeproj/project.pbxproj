@@ -18,7 +18,10 @@
 		E01A4DE91E95FA6E00626F3C /* C4MVTGlobalConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01A4DE71E95FA6E00626F3C /* C4MVTGlobalConst.swift */; };
 		E01A4DEA1E95FA6E00626F3C /* C4MVTUIColorConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01A4DE81E95FA6E00626F3C /* C4MVTUIColorConst.swift */; };
 		E01A4DED1E95FA7900626F3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01A4DEB1E95FA7900626F3C /* AppDelegate.swift */; };
-		E01A4DEE1E95FA7900626F3C /* iOSMVT-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E01A4DEC1E95FA7900626F3C /* iOSMVT-Info.plist */; };
+		E01A4E1F1E96368B00626F3C /* C4MVTBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01A4E1E1E96368B00626F3C /* C4MVTBaseController.swift */; };
+		E01A4E211E963BF400626F3C /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E01A4E201E963BF400626F3C /* SnapKit.framework */; };
+		E01A4E221E963BF400626F3C /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E01A4E201E963BF400626F3C /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E05842021E97489200F47023 /* C4MVPNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05842011E97489200F47023 /* C4MVPNavBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,20 @@
 			remoteInfo = iOSMVT;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E01A4E231E963BF400626F3C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E01A4E221E963BF400626F3C /* SnapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E01A4DA71E95F95200626F3C /* iOSMVT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSMVT.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +74,9 @@
 		E01A4DE81E95FA6E00626F3C /* C4MVTUIColorConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTUIColorConst.swift; path = Const/C4MVTUIColorConst.swift; sourceTree = "<group>"; };
 		E01A4DEB1E95FA7900626F3C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Application/AppDelegate.swift; sourceTree = "<group>"; };
 		E01A4DEC1E95FA7900626F3C /* iOSMVT-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "iOSMVT-Info.plist"; path = "Application/iOSMVT-Info.plist"; sourceTree = "<group>"; };
+		E01A4E1E1E96368B00626F3C /* C4MVTBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTBaseController.swift; path = Controller/C4MVTBaseController.swift; sourceTree = "<group>"; };
+		E01A4E201E963BF400626F3C /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		E05842011E97489200F47023 /* C4MVPNavBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVPNavBarView.swift; path = View/C4MVPNavBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E01A4E211E963BF400626F3C /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +108,7 @@
 		E01A4D9E1E95F95200626F3C = {
 			isa = PBXGroup;
 			children = (
+				E01A4E201E963BF400626F3C /* SnapKit.framework */,
 				E01A4DA91E95F95200626F3C /* iOSMVT */,
 				E01A4DBE1E95F95200626F3C /* iOSMVTTests */,
 				E01A4DC91E95F95200626F3C /* iOSMVTUITests */,
@@ -149,6 +171,7 @@
 		E01A4DD91E95FA0800626F3C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E01A4E1E1E96368B00626F3C /* C4MVTBaseController.swift */,
 				E01A4DE31E95FA6200626F3C /* C4MVTTabBarController.swift */,
 				E01A4DE41E95FA6200626F3C /* ViewController.swift */,
 			);
@@ -158,6 +181,7 @@
 		E01A4DDA1E95FA0E00626F3C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E05842011E97489200F47023 /* C4MVPNavBarView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -190,6 +214,8 @@
 				E01A4DA31E95F95200626F3C /* Sources */,
 				E01A4DA41E95F95200626F3C /* Frameworks */,
 				E01A4DA51E95F95200626F3C /* Resources */,
+				E01A4E231E963BF400626F3C /* Embed Frameworks */,
+				E01A4E241E963CB900626F3C /* Carthage Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -289,7 +315,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E01A4DB51E95F95200626F3C /* LaunchScreen.storyboard in Resources */,
-				E01A4DEE1E95FA7900626F3C /* iOSMVT-Info.plist in Resources */,
 				E01A4DB21E95F95200626F3C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,15 +335,35 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E01A4E241E963CB900626F3C /* Carthage Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+			);
+			name = "Carthage Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E01A4DA31E95F95200626F3C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E01A4DE01E95FA3E00626F3C /* C4MVTUIImageExtension.swift in Sources */,
+				E01A4E1F1E96368B00626F3C /* C4MVTBaseController.swift in Sources */,
 				E01A4DE11E95FA3E00626F3C /* C4MVTUIViewControllerExtension.swift in Sources */,
 				E01A4DE61E95FA6200626F3C /* ViewController.swift in Sources */,
 				E01A4DE91E95FA6E00626F3C /* C4MVTGlobalConst.swift in Sources */,
+				E05842021E97489200F47023 /* C4MVPNavBarView.swift in Sources */,
 				E01A4DED1E95FA7900626F3C /* AppDelegate.swift in Sources */,
 				E01A4DEA1E95FA6E00626F3C /* C4MVTUIColorConst.swift in Sources */,
 				E01A4DE51E95FA6200626F3C /* C4MVTTabBarController.swift in Sources */,
@@ -468,6 +513,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "iOSMVT/Application/iOSMVT-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coder4.iOSMVT;
@@ -483,6 +532,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "iOSMVT/Application/iOSMVT-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coder4.iOSMVT;
@@ -565,6 +618,7 @@
 				E01A4DD11E95F95200626F3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E01A4DD21E95F95200626F3C /* Build configuration list for PBXNativeTarget "iOSMVTTests" */ = {
 			isa = XCConfigurationList;
@@ -573,6 +627,7 @@
 				E01A4DD41E95F95200626F3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E01A4DD51E95F95200626F3C /* Build configuration list for PBXNativeTarget "iOSMVTUITests" */ = {
 			isa = XCConfigurationList;
@@ -581,6 +636,7 @@
 				E01A4DD71E95F95200626F3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

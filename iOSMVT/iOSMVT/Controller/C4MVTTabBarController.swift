@@ -29,14 +29,14 @@ class C4MVTTabBarController: UITabBarController {
         let vc3 = ViewController()
         vc3.tabBarItem = UITabBarItem(title: "Setting", image: UIImage(named: "SettingIcon"), selectedImage: UIImage(named: "SettingSelectedIcon"))
 
-        self.tabBar.backgroundImage = UIImage.c4mvt_pureColorImage(color: UIColor.UI_background)
-        self.tabBar.shadowImage = UIImage.c4mvt_pureColorImage(color: UIColor.UI_background)
+        self.tabBar.backgroundImage = UIImage.c4mvt_pureColorImage(color: .UI_navBackground)
+        self.tabBar.shadowImage = UIImage.c4mvt_pureColorImage(color: .UI_navBackground)
         self.tabBar.clipsToBounds = true
         self.tabBar.tintColor = UIColor.UI_blue
 
         let borderLayer = CALayer()
-        borderLayer.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: C4MVTGlobalConstants.C4MVT_1PX)
-        borderLayer.backgroundColor = UIColor.UI_boundry.cgColor
+        borderLayer.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: C4MVTGlobalConstants.c4mvt_1PX)
+        borderLayer.backgroundColor = UIColor.UI_darkBoundry.cgColor
         self.tabBar.layer.addSublayer(borderLayer)
 
         self.viewControllers = [vc1.c4mvt_wrapInNavigationController(),

@@ -11,7 +11,12 @@ import UIKit
 
 struct C4MVTGlobalConstants {
 
-    static let C4MVT_1PX = 1.0 / UIScreen.main.scale
+    static let c4mvt_1PX: CGFloat = 1.0 / UIScreen.main.scale
+    static let statusBarHeight: CGFloat = 20
+    static let navBarHeight: CGFloat = 64
+    static let screenWidth = UIScreen.main.bounds.size.width
+    static let screenHeight = UIScreen.main.bounds.size.height
+
     static let IS_IOS8 = (UIDevice.current.systemVersion as NSString).doubleValue >= 8.0
     static let IS_IOS9 = (UIDevice.current.systemVersion as NSString).doubleValue >= 9.0
     static let IS_IOS10 = (UIDevice.current.systemVersion as NSString).doubleValue >= 10.0
