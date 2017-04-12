@@ -11,7 +11,7 @@ The ui and logic are reduced to minimal, just to show Minimum viable technology 
 ## How to run
 ```
 cd iOSMVT
-carthage bootstrap --platform iOS
+carthage bootstrap --platform iOS --no-use-binaries --verbose
 ```
 
 ## Resource
