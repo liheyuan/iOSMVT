@@ -69,7 +69,7 @@ class C4MVTBaseController: UIViewController {
         view.addSubview(navBarView)
         navBarView.snp.makeConstraints { (make) in
             make.top.leading.trailing.equalToSuperview()
-            make.height.equalTo(C4MVTGlobalConstants.navBarHeight)
+            make.height.equalTo(C4MVTGlobalConst.navBarHeight)
         }
         navBarView.bind(with: navBarTitle,
                         leftIconType: .back)

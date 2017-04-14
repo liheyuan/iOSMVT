@@ -57,7 +57,7 @@ class C4MVPNavBarView: UIView {
             make.leading.greaterThanOrEqualToSuperview().offset(C4MVPNavBarView.NavBarIconBGWidth)
             make.trailing.lessThanOrEqualToSuperview().offset(-C4MVPNavBarView.NavBarIconBGWidth)
         }
-        navBarTitleLabel.preferredMaxLayoutWidth = C4MVTGlobalConstants.screenWidth - 2 * C4MVPNavBarView.NavBarIconBGWidth
+        navBarTitleLabel.preferredMaxLayoutWidth = C4MVTGlobalConst.screenWidth - 2 * C4MVPNavBarView.NavBarIconBGWidth
         //
         navBarLeftBtn.addTarget(self, action: #selector(navBarLeftBtnPressed), for: .touchUpInside)
         navBarRightBtn.addTarget(self, action: #selector(navBarRightBtnPressed), for: .touchUpInside)

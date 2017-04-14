@@ -1,5 +1,5 @@
 //
-//  C4MVTGlobalConstants.swift
+//  C4MVTGlobalConst.swift
 //  iOSMVT
 //
 //  Created by Heyuan Li on 2017/4/5.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct C4MVTGlobalConstants {
+struct C4MVTGlobalConst {
 
     static let c4mvt_1PX: CGFloat = 1.0 / UIScreen.main.scale
     static let statusBarHeight: CGFloat = 20

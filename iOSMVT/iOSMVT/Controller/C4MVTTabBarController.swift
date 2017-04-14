@@ -35,7 +35,7 @@ class C4MVTTabBarController: UITabBarController {
         self.tabBar.tintColor = UIColor.UI_blue
 
         let borderLayer = CALayer()
-        borderLayer.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: C4MVTGlobalConstants.c4mvt_1PX)
+        borderLayer.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: C4MVTGlobalConst.c4mvt_1PX)
         borderLayer.backgroundColor = UIColor.UI_darkBoundry.cgColor
         self.tabBar.layer.addSublayer(borderLayer)
 
