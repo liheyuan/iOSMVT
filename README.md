@@ -7,6 +7,8 @@ The ui and logic are reduced to minimal, just to show Minimum viable technology 
 ### Technology Stack
 * Architecture: TabbarController->NavigationController->ViewController
 * Autolayout: SnapKit
+* Network: Alamofire
+* Serialize/Deserialize: ObjectMapper
 
 ## How to run
 ```
