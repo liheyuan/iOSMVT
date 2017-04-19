@@ -18,7 +18,7 @@ struct C4MVTHostConst {
     static func getHostUrlBy(type: C4MVTHostType) -> String {
         switch type {
         case .host1:
-            return "https://api.coder4.com"
+            return "http://api.coder4.com"
         case .host2:
             return "https://httpbin.org"
         }

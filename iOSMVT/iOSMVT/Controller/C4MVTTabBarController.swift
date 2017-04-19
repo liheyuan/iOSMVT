@@ -20,13 +20,13 @@ class C4MVTTabBarController: UITabBarController {
     }
 
     fileprivate func setupTabBarControllers() {
-        let vc1 = ViewController()
+        let vc1 = C4MVTFirstController()
         vc1.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "HomeIcon"), selectedImage: UIImage(named: "HomeSelectedIcon"))
 
-        let vc2 = ViewController()
+        let vc2 = C4MVTSecondController()
         vc2.tabBarItem = UITabBarItem(title: "Camera", image: UIImage(named: "CameraIcon"), selectedImage: UIImage(named: "CameraSelectedIcon"))
 
-        let vc3 = ViewController()
+        let vc3 = C4MVTThirdController()
         vc3.tabBarItem = UITabBarItem(title: "Setting", image: UIImage(named: "SettingIcon"), selectedImage: UIImage(named: "SettingSelectedIcon"))
 
         self.tabBar.backgroundImage = UIImage.c4mvt_pureColorImage(color: .UI_navBackground)

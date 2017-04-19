@@ -16,6 +16,7 @@ struct C4MVTGlobalConst {
     static let navBarHeight: CGFloat = 64
     static let screenWidth = UIScreen.main.bounds.size.width
     static let screenHeight = UIScreen.main.bounds.size.height
+    static let padding: CGFloat = 15
 
     static let IS_IOS8 = (UIDevice.current.systemVersion as NSString).doubleValue >= 8.0
     static let IS_IOS9 = (UIDevice.current.systemVersion as NSString).doubleValue >= 9.0

@@ -1,5 +1,5 @@
 //
-//  C4MVPNavBarView.swift
+//  C4MVTNavBarView.swift
 //  iOSMVT
 //
 //  Created by Heyuan Li on 2017/4/7.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class C4MVPNavBarView: UIView {
+class C4MVTNavBarView: UIView {
 
     // MAKR: - Const
     fileprivate static let NavBarIconBGWidth: CGFloat = 40
@@ -54,10 +54,10 @@ class C4MVPNavBarView: UIView {
         navBarTitleLabel.snp.makeConstraints { (make) in
             make.centerY.equalTo(self.snp.bottom).offset(-22)
             make.centerX.equalToSuperview()
-            make.leading.greaterThanOrEqualToSuperview().offset(C4MVPNavBarView.NavBarIconBGWidth)
-            make.trailing.lessThanOrEqualToSuperview().offset(-C4MVPNavBarView.NavBarIconBGWidth)
+            make.leading.greaterThanOrEqualToSuperview().offset(C4MVTNavBarView.NavBarIconBGWidth)
+            make.trailing.lessThanOrEqualToSuperview().offset(-C4MVTNavBarView.NavBarIconBGWidth)
         }
-        navBarTitleLabel.preferredMaxLayoutWidth = C4MVTGlobalConst.screenWidth - 2 * C4MVPNavBarView.NavBarIconBGWidth
+        navBarTitleLabel.preferredMaxLayoutWidth = C4MVTGlobalConst.screenWidth - 2 * C4MVTNavBarView.NavBarIconBGWidth
         //
         navBarLeftBtn.addTarget(self, action: #selector(navBarLeftBtnPressed), for: .touchUpInside)
         navBarRightBtn.addTarget(self, action: #selector(navBarRightBtnPressed), for: .touchUpInside)
@@ -82,8 +82,8 @@ class C4MVPNavBarView: UIView {
 
             navBarLeftBtn.snp.remakeConstraints({ (make) in
                 make.centerY.equalTo(navBarTitleLabel)
-                make.leading.equalToSuperview().offset(C4MVPNavBarView.NavBarIconPadding)
-                make.height.width.equalTo(C4MVPNavBarView.NavBarIconWidth)
+                make.leading.equalToSuperview().offset(C4MVTNavBarView.NavBarIconPadding)
+                make.height.width.equalTo(C4MVTNavBarView.NavBarIconWidth)
             })
 
             switch iconType {
@@ -105,8 +105,8 @@ class C4MVPNavBarView: UIView {
 
             navBarRightBtn.snp.remakeConstraints({ (make) in
                 make.centerY.equalTo(navBarTitleLabel)
-                make.trailing.equalToSuperview().offset(-C4MVPNavBarView.NavBarIconPadding)
-                make.height.width.equalTo(C4MVPNavBarView.NavBarIconWidth)
+                make.trailing.equalToSuperview().offset(-C4MVTNavBarView.NavBarIconPadding)
+                make.height.width.equalTo(C4MVTNavBarView.NavBarIconWidth)
             })
 
             switch iconType {
@@ -127,7 +127,7 @@ class C4MVPNavBarView: UIView {
 }
 
 // MARK: - Click
-extension C4MVPNavBarView {
+extension C4MVTNavBarView {
 
     func navBarLeftBtnPressed(sender: UIButton) {
         print("Left Button tapped")

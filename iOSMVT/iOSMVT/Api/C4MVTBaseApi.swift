@@ -23,7 +23,7 @@ enum C4MVTApiRequestMethod: String {
 }
 
 enum C4MVTApiRequestParameterEncoding {
-    case defaultEncoding
+    case queryEncoding
     case jsonEncoding
 }
 
@@ -52,7 +52,12 @@ class C4MVTBaseApi: NSObject {
 
     // MARK: - Funtion for call
     func start() {
-        Alamofire.request(getRequestUrl(),
+        startWithCallback()
+    }
+
+    func startWithCallback(succ: (() -> Void)? = nil,
+                           fail: ((C4MVTApiErrorType) -> Void)? = nil) {
+        let request = Alamofire.request(getRequestUrl(),
                           method: getRequestMethod(),
                           parameters: requestParameters(),
                           encoding: getRequestEncoding(),
@@ -66,7 +71,12 @@ class C4MVTBaseApi: NSObject {
                 switch response.result {
                 case .success(let value):
                     self.responseString = value
-                    self.delegate?.requestSuccess(api: self)
+                    // succ callback
+                    if let succcb = succ {
+                        succcb()
+                    } else {
+                        self.delegate?.requestSuccess(api: self)
+                    }
                     return
                 case .failure(let error):
                     var err: C4MVTApiErrorType = .unknownError
@@ -93,10 +103,18 @@ class C4MVTBaseApi: NSObject {
                             err = .responseError
                         }
                     }
-                    self.delegate?.requestFailed(api: self, err: err)
-                    break
+                    // fail callback
+                    if let failcb = fail {
+                        failcb(err)
+                    } else {
+                        self.delegate?.requestFailed(api: self, err: err)
+                    }
+                    return
                 }
         })
+
+        // debug
+        debugPrint(request)
     }
 
     func mapToObject<T: Mappable>() -> T? {
@@ -125,7 +143,7 @@ class C4MVTBaseApi: NSObject {
     }
 
     func requestParameterEncoding() -> C4MVTApiRequestParameterEncoding {
-        return .defaultEncoding
+        return .queryEncoding
     }
 
     // MARK: - Private func
@@ -143,8 +161,8 @@ class C4MVTBaseApi: NSObject {
 
     fileprivate func getRequestEncoding() -> ParameterEncoding {
         switch requestParameterEncoding() {
-        case .defaultEncoding:
-            return URLEncoding.default
+        case .queryEncoding:
+            return URLEncoding.queryString
         case .jsonEncoding:
             return JSONEncoding.default
         }
