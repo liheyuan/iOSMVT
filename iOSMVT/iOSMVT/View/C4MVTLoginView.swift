@@ -86,7 +86,9 @@ class C4MVTLoginView: UIView {
     func loginBtnPressed() {
         C4MVTAccountAgent.shared.login(user: usernameField.text ?? "",
                                        pass: passwordField.text ?? "") { (succ) in
-
+                                        if succ {
+                                            C4MVTTabBarController.shared.addLast()
+                                        }
         }
     }
 

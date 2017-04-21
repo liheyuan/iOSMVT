@@ -23,13 +23,13 @@ class C4MVTTabBarController: UITabBarController {
 
     fileprivate func setupTabBarControllers() {
         let vc1 = C4MVTFirstController()
-        vc1.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "HomeIcon"), selectedImage: UIImage(named: "HomeSelectedIcon"))
+        vc1.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "HomeIcon"), selectedImage: nil)
 
         let vc2 = C4MVTSecondController()
-        vc2.tabBarItem = UITabBarItem(title: "Camera", image: UIImage(named: "CameraIcon"), selectedImage: UIImage(named: "CameraSelectedIcon"))
+        vc2.tabBarItem = UITabBarItem(title: "Camera", image: UIImage(named: "CameraIcon"), selectedImage: nil)
 
         let vc3 = C4MVTThirdController()
-        vc3.tabBarItem = UITabBarItem(title: "Setting", image: UIImage(named: "SettingIcon"), selectedImage: UIImage(named: "SettingSelectedIcon"))
+        vc3.tabBarItem = UITabBarItem(title: "Setting", image: UIImage(named: "SettingIcon"), selectedImage: nil)
 
         self.tabBar.backgroundImage = UIImage.c4mvt_pureColorImage(color: .UI_navBackground)
         self.tabBar.shadowImage = UIImage.c4mvt_pureColorImage(color: .UI_navBackground)
@@ -44,6 +44,31 @@ class C4MVTTabBarController: UITabBarController {
         self.viewControllers = [vc1.c4mvt_wrapInNavigationController(),
                                 vc2.c4mvt_wrapInNavigationController(),
                                 vc3.c4mvt_wrapInNavigationController()]
+    }
+
+    func addLast() {
+        guard let currentViewControllers = self.viewControllers,
+            currentViewControllers.count == 3 else {
+            return
+        }
+
+        var newvcs = Array(currentViewControllers)
+
+        let vc4 = C4MVTFourthController()
+        vc4.tabBarItem = UITabBarItem(title: "Crown", image: UIImage(named: "CrownIcon"), selectedImage: nil)
+
+        newvcs.append(vc4.c4mvt_wrapInNavigationController())
+
+        self.viewControllers = newvcs
+    }
+
+    func removeLast() {
+        guard let currentViewControllers = self.viewControllers,
+            currentViewControllers.count == 4 else {
+            return
+        }
+
+        self.viewControllers?.remove(at: 3)
     }
 
 }

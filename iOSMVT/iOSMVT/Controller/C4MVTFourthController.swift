@@ -1,20 +1,20 @@
 //
-//  C4MVTThirdController.swift
+//  C4MVTFourthController.swift
 //  iOSMVT
 //
-//  Created by Heyuan Li on 2017/4/19.
+//  Created by Heyuan Li on 2017/4/21.
 //  Copyright © 2017年 Coder4. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-class C4MVTThirdController: C4MVTBaseController {
+class C4MVTFourthController: C4MVTBaseController {
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         navBarType = .home
-        navBarTitle = "Setting"
+        navBarTitle = "Crown"
+        needLoginCover = false
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -29,13 +29,11 @@ class C4MVTThirdController: C4MVTBaseController {
     }
 
     fileprivate func setupUI() {
-        let btn = UIButton()
-        btn.setTitle("Logout", for: UIControlState())
-        btn.addTarget(self, action: #selector(logoutBtnPressed), for: .touchUpInside)
-        btn.setTitleColor(UIColor.black, for: UIControlState())
-        addSubviewToMain(btn)
+        let label = UILabel()
+        label.text = "Hello Crown"
+        addSubviewToMain(label)
 
-        btn.snp.makeConstraints { (make) in
+        label.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
         }
     }
@@ -47,11 +45,6 @@ class C4MVTThirdController: C4MVTBaseController {
     override func loading() {
         // fake loading success
         render()
-    }
-
-    func logoutBtnPressed() {
-        C4MVTAccountAgent.shared.logout()
-        C4MVTTabBarController.shared.removeLast()
     }
     
 }
