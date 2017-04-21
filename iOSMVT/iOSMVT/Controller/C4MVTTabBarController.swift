@@ -10,7 +10,9 @@ import UIKit
 
 class C4MVTTabBarController: UITabBarController {
 
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    static let shared: C4MVTTabBarController = C4MVTTabBarController(nibName: nil, bundle: nil)
+
+    fileprivate override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setupTabBarControllers()
     }

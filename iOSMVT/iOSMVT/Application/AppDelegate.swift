@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.backgroundColor = UIColor.white
         self.window?.makeKeyAndVisible()
-        self.window?.rootViewController = C4MVTTabBarController()
+        self.window?.rootViewController = C4MVTTabBarController.shared
         return true
     }
 
