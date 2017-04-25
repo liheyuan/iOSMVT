@@ -25,7 +25,8 @@ class C4MVTTabBarController: UITabBarController {
         let vc1 = C4MVTFirstController()
         vc1.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "HomeIcon"), selectedImage: nil)
 
-        let vc2 = C4MVTSecondController()
+        //let vc2 = C4MVTSecondController()
+        let vc2 = C4MVTMJDemoController()
         vc2.tabBarItem = UITabBarItem(title: "Camera", image: UIImage(named: "CameraIcon"), selectedImage: nil)
 
         let vc3 = C4MVTThirdController()
