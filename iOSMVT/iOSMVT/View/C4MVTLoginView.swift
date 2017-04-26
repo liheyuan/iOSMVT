@@ -52,6 +52,8 @@ class C4MVTLoginView: UIView {
     }
 
     fileprivate func setupUI() {
+        backgroundColor = UIColor.UI_background
+
         addSubview(logoImageView)
         addSubview(usernameField)
         addSubview(passwordField)

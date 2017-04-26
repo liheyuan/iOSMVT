@@ -42,6 +42,7 @@ class C4MVTBaseController: UIViewController {
     var needLoginCover: Bool {
         return true
     }
+
     var needRotate: Bool {
         return false
     }
