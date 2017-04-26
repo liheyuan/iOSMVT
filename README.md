@@ -11,6 +11,7 @@ The ui and logic are reduced to minimal, just to show Minimum viable technology 
 * Serialize/Deserialize: ObjectMapper
 * Refresh & LoadMore: MJRefresh
 * Toast: ToastSwift 
+* Form: Eureka
 
 ## How to run
 ```
