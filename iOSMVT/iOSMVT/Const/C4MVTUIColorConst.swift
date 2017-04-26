@@ -15,6 +15,8 @@ extension UIColor {
     static let UI_darkBoundry = UIColor(rgbValue: 0xcccccc)
     static let UI_background = UIColor(rgbValue: 0xf3f4f5)
     static let UI_navBackground = UIColor(rgbValue: 0xf6f6f7)
+    static let UI_darkTextColor = UIColor(rgbValue: 0x333333)
+    static let UI_normalTextColor = UIColor(rgbValue: 0x666666)
 
     // MARK: - Funtions
     convenience init(rgbValue: UInt) {

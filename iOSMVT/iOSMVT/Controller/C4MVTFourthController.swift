@@ -10,17 +10,20 @@ import UIKit
 
 class C4MVTFourthController: C4MVTBaseController {
 
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        navBarType = .home
-        navBarTitle = "Crown"
-        needLoginCover = false
+    // MARK: - Property
+    override var navBarType: C4MVTNavBarType {
+        return .home
     }
 
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    override var navBarTitle: String {
+        return "Crown"
     }
 
+    override var needLoginCover: Bool {
+        return false
+    }
+
+    // MARK: - Funtions
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()

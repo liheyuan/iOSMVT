@@ -15,6 +15,18 @@ class C4MVTMJDemoController: C4MVTBaseController {
     // MARK: - Property
     fileprivate var lines: Int = 20
 
+    override var navBarTitle: String {
+        return "MJ Demo"
+    }
+
+    override var needLoginCover: Bool {
+        return false
+    }
+
+    override var needRotate: Bool {
+        return true
+    }
+
     // MARK: - UI Getter
     fileprivate lazy var tableView: UITableView = {
         let tv = UITableView()
@@ -23,17 +35,6 @@ class C4MVTMJDemoController: C4MVTBaseController {
     }()
 
     // MARK: - Funtions
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        navBarType = .home
-        navBarTitle = "MJ Demo"
-        needLoginCover = false
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()

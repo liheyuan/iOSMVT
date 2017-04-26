@@ -8,15 +8,22 @@
 
 import UIKit
 
+protocol C4MVTNavBarViewDelegate: NSObjectProtocol {
+    func navBarDidPressLeftButton(_ view: C4MVTNavBarView)
+    func navBarDidPressRightButton(_ view: C4MVTNavBarView)
+}
+
 class C4MVTNavBarView: UIView {
 
-    // MAKR: - Const
+    // MARK: - Const
     fileprivate static let NavBarIconBGWidth: CGFloat = 40
     fileprivate static let NavBarIconWidth: CGFloat = 20
     fileprivate static let NavBarIconPadding: CGFloat = 12
 
-    // MARK: - UI Getter
+    // MARK: - Property
+    weak var delegate: C4MVTNavBarViewDelegate? = nil
 
+    // MARK: - UI Getter
     private lazy var navBarTitleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
@@ -130,10 +137,10 @@ class C4MVTNavBarView: UIView {
 extension C4MVTNavBarView {
 
     func navBarLeftBtnPressed(sender: UIButton) {
-        print("Left Button tapped")
+        delegate?.navBarDidPressLeftButton(self)
     }
 
     func navBarRightBtnPressed(sender: UIButton) {
-        print("Right Button tapped")
+        delegate?.navBarDidPressRightButton(self)
     }
 }

@@ -32,6 +32,8 @@
 		E08473281EA783E60052F4E6 /* ToastSwiftFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08473271EA783E60052F4E6 /* ToastSwiftFramework.framework */; };
 		E08473291EA783E60052F4E6 /* ToastSwiftFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E08473271EA783E60052F4E6 /* ToastSwiftFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E09C29071EA627900043DC96 /* C4MVTNeedAuthApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09C29061EA627900043DC96 /* C4MVTNeedAuthApi.swift */; };
+		E0B3C2F51EB087AD000A7B4F /* Eureka.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0B3C2F41EB087AD000A7B4F /* Eureka.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E0B3C30E1EB09E0A000A7B4F /* C4MVTFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B3C30D1EB09E0A000A7B4F /* C4MVTFormViewController.swift */; };
 		E0BF5E4A1EA1BFD100DCAC22 /* C4MVTLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BF5E491EA1BFD100DCAC22 /* C4MVTLoginView.swift */; };
 		E0D6BD081EAF35A600725D42 /* MJRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0D6BD071EAF35A600725D42 /* MJRefresh.framework */; };
 		E0D6BD091EAF35A600725D42 /* MJRefresh.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0D6BD071EAF35A600725D42 /* MJRefresh.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -40,6 +42,7 @@
 		E0DD1A7E1EA4F041008062F6 /* C4MVTUserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DD1A7D1EA4F041008062F6 /* C4MVTUserObject.swift */; };
 		E0DD1A811EA4F11D008062F6 /* C4MVTHashUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DD1A801EA4F11D008062F6 /* C4MVTHashUtil.swift */; };
 		E0E073AA1EA237F100D2D1E7 /* C4MVTTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E073A91EA237F100D2D1E7 /* C4MVTTextField.swift */; };
+		E0EB44871EB0A87100B187CB /* C4MVTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EB44861EB0A87100B187CB /* C4MVTNavigationController.swift */; };
 		E0EC43A41EAF27E4006FD280 /* C4MVTMJDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EC43A31EAF27E4006FD280 /* C4MVTMJDemoController.swift */; };
 		E0EFE49E1E9E2CC500D1949F /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EFE49C1E9E2CC500D1949F /* ObjectMapper.framework */; };
 		E0EFE49F1E9E2CC500D1949F /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0EFE49C1E9E2CC500D1949F /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -74,6 +77,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				E0B3C2F51EB087AD000A7B4F /* Eureka.framework in Embed Frameworks */,
 				E0D6BD091EAF35A600725D42 /* MJRefresh.framework in Embed Frameworks */,
 				E0EFE49F1E9E2CC500D1949F /* ObjectMapper.framework in Embed Frameworks */,
 				E01A4E221E963BF400626F3C /* SnapKit.framework in Embed Frameworks */,
@@ -116,6 +120,8 @@
 		E08473251EA77CF00052F4E6 /* C4MVTFirstController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTFirstController.swift; path = Controller/C4MVTFirstController.swift; sourceTree = "<group>"; };
 		E08473271EA783E60052F4E6 /* ToastSwiftFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ToastSwiftFramework.framework; path = Carthage/Build/iOS/ToastSwiftFramework.framework; sourceTree = "<group>"; };
 		E09C29061EA627900043DC96 /* C4MVTNeedAuthApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTNeedAuthApi.swift; path = Api/C4MVTNeedAuthApi.swift; sourceTree = "<group>"; };
+		E0B3C2F41EB087AD000A7B4F /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = Carthage/Build/iOS/Eureka.framework; sourceTree = "<group>"; };
+		E0B3C30D1EB09E0A000A7B4F /* C4MVTFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTFormViewController.swift; path = Controller/C4MVTFormViewController.swift; sourceTree = "<group>"; };
 		E0BF5E491EA1BFD100DCAC22 /* C4MVTLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTLoginView.swift; path = View/C4MVTLoginView.swift; sourceTree = "<group>"; };
 		E0D6BD071EAF35A600725D42 /* MJRefresh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MJRefresh.framework; path = Carthage/Build/iOS/MJRefresh.framework; sourceTree = "<group>"; };
 		E0DD1A791EA4E562008062F6 /* C4MVTAccountAgent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTAccountAgent.swift; path = Agent/C4MVTAccountAgent.swift; sourceTree = "<group>"; };
@@ -123,6 +129,7 @@
 		E0DD1A7D1EA4F041008062F6 /* C4MVTUserObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTUserObject.swift; path = DataObject/C4MVTUserObject.swift; sourceTree = "<group>"; };
 		E0DD1A801EA4F11D008062F6 /* C4MVTHashUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTHashUtil.swift; path = Util/C4MVTHashUtil.swift; sourceTree = "<group>"; };
 		E0E073A91EA237F100D2D1E7 /* C4MVTTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTTextField.swift; path = View/C4MVTTextField.swift; sourceTree = "<group>"; };
+		E0EB44861EB0A87100B187CB /* C4MVTNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTNavigationController.swift; path = Controller/C4MVTNavigationController.swift; sourceTree = "<group>"; };
 		E0EC43A31EAF27E4006FD280 /* C4MVTMJDemoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTMJDemoController.swift; path = Controller/C4MVTMJDemoController.swift; sourceTree = "<group>"; };
 		E0EFE49C1E9E2CC500D1949F /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		E0EFE4A51E9E2CF800D1949F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -239,6 +246,8 @@
 				E08473231EA77C290052F4E6 /* C4MVTThirdController.swift */,
 				E0FF98001EAA30D400C6B390 /* C4MVTFourthController.swift */,
 				E0EC43A31EAF27E4006FD280 /* C4MVTMJDemoController.swift */,
+				E0B3C30D1EB09E0A000A7B4F /* C4MVTFormViewController.swift */,
+				E0EB44861EB0A87100B187CB /* C4MVTNavigationController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -286,6 +295,7 @@
 		E05842BD1E97C48600F47023 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E0B3C2F41EB087AD000A7B4F /* Eureka.framework */,
 				E0D6BD071EAF35A600725D42 /* MJRefresh.framework */,
 				E0EFE4A51E9E2CF800D1949F /* Alamofire.framework */,
 				E0EFE49C1E9E2CC500D1949F /* ObjectMapper.framework */,
@@ -465,6 +475,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ToastSwiftFramework.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/MJRefresh.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Eureka.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
@@ -492,6 +503,7 @@
 				E08473241EA77C290052F4E6 /* C4MVTThirdController.swift in Sources */,
 				E05842C01E97C59300F47023 /* C4MVTBaseApi.swift in Sources */,
 				E0BF5E4A1EA1BFD100DCAC22 /* C4MVTLoginView.swift in Sources */,
+				E0B3C30E1EB09E0A000A7B4F /* C4MVTFormViewController.swift in Sources */,
 				E08473221EA761F80052F4E6 /* C4MVTNotificationConst.swift in Sources */,
 				E0DD1A811EA4F11D008062F6 /* C4MVTHashUtil.swift in Sources */,
 				E08085871E9E3F6D00FD2CA9 /* C4MVTHostConst.swift in Sources */,
@@ -503,6 +515,7 @@
 				E05842021E97489200F47023 /* C4MVTNavBarView.swift in Sources */,
 				E01A4DED1E95FA7900626F3C /* AppDelegate.swift in Sources */,
 				E01A4DEA1E95FA6E00626F3C /* C4MVTUIColorConst.swift in Sources */,
+				E0EB44871EB0A87100B187CB /* C4MVTNavigationController.swift in Sources */,
 				E01A4DE51E95FA6200626F3C /* C4MVTTabBarController.swift in Sources */,
 				E0EC43A41EAF27E4006FD280 /* C4MVTMJDemoController.swift in Sources */,
 				E0FF98011EAA30D400C6B390 /* C4MVTFourthController.swift in Sources */,

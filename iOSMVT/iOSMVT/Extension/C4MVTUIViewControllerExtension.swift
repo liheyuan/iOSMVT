@@ -11,6 +11,6 @@ import UIKit
 extension UIViewController {
 
     func c4mvt_wrapInNavigationController() -> UINavigationController {
-        return UINavigationController(rootViewController: self)
+        return C4MVTNavigationController(rootViewController: self)
     }
 }

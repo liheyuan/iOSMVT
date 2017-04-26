@@ -11,15 +11,16 @@ import UIKit
 
 class C4MVTThirdController: C4MVTBaseController {
 
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        navBarType = .home
-        navBarTitle = "Setting"
+    // MARK: - Property
+    override var navBarType: C4MVTNavBarType {
+        return .home
     }
 
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    override var navBarTitle: String {
+        return "Setting"
     }
+
+    // MARK: - Funtions
 
     override func viewDidLoad() {
         super.viewDidLoad()

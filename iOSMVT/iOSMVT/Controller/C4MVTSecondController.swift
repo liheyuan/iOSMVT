@@ -7,34 +7,46 @@
 //
 
 import UIKit
+import Eureka
+import ToastSwiftFramework
+
+class C4MVTSecondFormController: C4MVTFormViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        form +++ Section("UITableViewDemo")
+            <<< ButtonRow("Refresh & Loadmore") {
+                $0.title = $0.tag
+            }.onCellSelection({ (cell, row) in
+                self.navigationController?.pushViewController(C4MVTMJDemoController(), animated: true)
+            })
+            <<< LabelRow("Custom cell height") {
+                $0.title = $0.tag
+            }
+        
+    }
+}
 
 class C4MVTSecondController: C4MVTBaseController {
 
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        navBarType = .home
-        navBarTitle = "Camera"
+    // MARK: - Property
+    override var navBarType: C4MVTNavBarType {
+        return .home
     }
 
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    override var navBarTitle: String {
+        return "Camera"
     }
 
+    // MARK: - Funtions
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+
+        let vc = C4MVTSecondFormController(nibName: nil, bundle: nil)
+        embeddedViewControllerToMain(vc)
+
         // try loading
         tryLoading()
-    }
-
-    fileprivate func setupUI() {
-        let label = UILabel()
-        label.text = "Hello Camera"
-        addSubviewToMain(label)
-
-        label.snp.makeConstraints { (make) in
-            make.center.equalToSuperview()
-        }
     }
 
     fileprivate func render() {

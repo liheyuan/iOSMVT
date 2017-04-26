@@ -31,10 +31,35 @@ class C4MVTBaseController: UIViewController {
     // MARK: - Const
 
     // MARK: - Property
-    var navBarType: C4MVTNavBarType
-    var navBarTitle: String
-    var needLoginCover: Bool = true
+    var navBarType: C4MVTNavBarType {
+        return .normal
+    }
+
+    var navBarTitle: String {
+        return "Title"
+    }
+
+    var needLoginCover: Bool {
+        return true
+    }
+    var needRotate: Bool {
+        return false
+    }
+
     fileprivate var isLogin: Bool
+
+    // MARK: - Property for Orientation
+    override var shouldAutorotate: Bool {
+        return needRotate ? true : false
+    }
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return needRotate ? .all : .portrait
+    }
+
+    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        return .portrait
+    }
 
     // MARK: - UI Getter
     fileprivate lazy var navBarView: C4MVTNavBarView = {
@@ -60,8 +85,6 @@ class C4MVTBaseController: UIViewController {
 
     // MAKR: - Funtions
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        navBarType = .normal
-        navBarTitle = "Title"
         isLogin = C4MVTAccountAgent.shared.isLoginCookieExist()
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Notification
@@ -69,6 +92,8 @@ class C4MVTBaseController: UIViewController {
             c4mvt_listenNotification(name: C4MVTNotificationConst.LoginSuccess, sel: #selector(loginSuccessHandler(_:)))
             c4mvt_listenNotification(name: C4MVTNotificationConst.LogoutSuccess, sel: #selector(logoutSuccessHandler(_:)))
         }
+        // Fix tabbar
+        fixTabBar()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -80,6 +105,8 @@ class C4MVTBaseController: UIViewController {
     }
 
     override func viewDidLoad() {
+        // Fix TabBar
+        fixTabBar()
         super.viewDidLoad()
         setupUI()
     }
@@ -106,6 +133,13 @@ class C4MVTBaseController: UIViewController {
         }
         navBarView.bind(with: navBarTitle,
                         leftIconType: navBarType == .home ? .none : .back)
+        navBarView.delegate = self
+    }
+
+    fileprivate func fixTabBar() {
+        if navBarType != .home {
+            hidesBottomBarWhenPushed = true
+        }
     }
 
     fileprivate func setupLoginCover() {
@@ -158,6 +192,15 @@ class C4MVTBaseController: UIViewController {
         mainView.addSubview(subView)
     }
 
+    func embeddedViewControllerToMain(_ vc: UIViewController) {
+        addChildViewController(vc)
+        addSubviewToMain(vc.view)
+        vc.didMove(toParentViewController: self)
+        vc.view.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+    }
+
     // Subclass should call this
     func tryLoading() {
         if canLoginSuccess() {
@@ -190,6 +233,30 @@ class C4MVTBaseController: UIViewController {
         view.hideToastActivity()
     }
 
+}
+
+// MARK: - C4MVTNavBarViewDelegate
+extension C4MVTBaseController: C4MVTNavBarViewDelegate {
+    func navBarDidPressLeftButton(_ view: C4MVTNavBarView) {
+        // close current vc on all condition
+        if let navC = self.navigationController {
+            if navC.viewControllers.first == self {
+                presentingViewController?.dismiss(animated: true, completion: nil)
+            } else {
+                navC.popViewController(animated: true)
+            }
+        } else {
+            dismiss(animated: true, completion: nil)
+        }
+        // fix Orientation
+        if (needRotate) {
+            UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+        }
+    }
+
+    func navBarDidPressRightButton(_ view: C4MVTNavBarView) {
+
+    }
 }
 
 // MARK: - Status Bar Config

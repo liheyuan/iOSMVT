@@ -10,11 +10,18 @@ import UIKit
 
 class C4MVTTabBarController: UITabBarController {
 
+    // Property
     static let shared: C4MVTTabBarController = C4MVTTabBarController(nibName: nil, bundle: nil)
 
+    override var shouldAutorotate: Bool {
+        return self.selectedViewController?.shouldAutorotate ?? false
+    }
+
+    // MARK: - Funtions
     fileprivate override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setupTabBarControllers()
+        delegate = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -25,8 +32,9 @@ class C4MVTTabBarController: UITabBarController {
         let vc1 = C4MVTFirstController()
         vc1.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "HomeIcon"), selectedImage: nil)
 
-        //let vc2 = C4MVTSecondController()
-        let vc2 = C4MVTMJDemoController()
+        let vc2 = C4MVTSecondController()
+        //let vc2 = C4MVTMJDemoController()
+        //let vc2 = C4MVTSecondFormController()
         vc2.tabBarItem = UITabBarItem(title: "Camera", image: UIImage(named: "CameraIcon"), selectedImage: nil)
 
         let vc3 = C4MVTThirdController()
@@ -72,4 +80,15 @@ class C4MVTTabBarController: UITabBarController {
         self.viewControllers?.remove(at: 3)
     }
 
+}
+
+// MARK: - UITabBarControllerDelegate
+extension C4MVTTabBarController: UITabBarControllerDelegate {
+    func tabBarControllerSupportedInterfaceOrientations(_ tabBarController: UITabBarController) -> UIInterfaceOrientationMask {
+        return selectedViewController?.supportedInterfaceOrientations ?? .all
+    }
+
+    func tabBarControllerPreferredInterfaceOrientationForPresentation(_ tabBarController: UITabBarController) -> UIInterfaceOrientation {
+        return selectedViewController?.preferredInterfaceOrientationForPresentation ?? .portrait
+    }
 }
