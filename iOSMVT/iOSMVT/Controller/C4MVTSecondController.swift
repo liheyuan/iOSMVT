@@ -14,16 +14,37 @@ class C4MVTSecondFormController: C4MVTFormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        form +++ Section("UITableViewDemo")
+        form
+            +++ Section("UITableView Demo")
             <<< ButtonRow("Refresh & Loadmore") {
                 $0.title = $0.tag
             }.onCellSelection({ (cell, row) in
                 self.navigationController?.pushViewController(C4MVTMJDemoController(), animated: true)
             })
-            <<< LabelRow("Custom cell height") {
+
+            +++ Section("Dynamic Tab Demo")
+            <<< ButtonRow("Add Last Tab") {
                 $0.title = $0.tag
-            }
-        
+            }.onCellSelection({ (cell, row) in
+                C4MVTTabBarController.shared.addLast()
+            })
+            <<< ButtonRow("Remove Last Tab") {
+                $0.title = $0.tag
+            }.onCellSelection({ (cell, row) in
+                C4MVTTabBarController.shared.removeLast()
+            })
+
+            +++ Section("Other Demo")
+            <<< ButtonRow("Loading 3 seconds") {
+                $0.title = $0.tag
+                }.onCellSelection({ (cell, row) in
+                    self.navigationController?.pushViewController(C4MVTLoadingDemoController(), animated: true)
+                })
+            <<< ButtonRow("Auto rotate vc") {
+                $0.title = $0.tag
+                }.onCellSelection({ (cell, row) in
+                    self.navigationController?.pushViewController(C4MVTRotateDemoController(), animated: true)
+                })
     }
 }
 
@@ -38,6 +59,10 @@ class C4MVTSecondController: C4MVTBaseController {
         return "Camera"
     }
 
+    override var needLoadingCover: Bool {
+        return false
+    }
+
     // MARK: - Funtions
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +71,7 @@ class C4MVTSecondController: C4MVTBaseController {
         embeddedViewControllerToMain(vc)
 
         // try loading
-        tryLoading()
+        self.tryLoading()
     }
 
     fileprivate func render() {

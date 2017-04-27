@@ -3,4 +3,5 @@ github "Alamofire/Alamofire" ~> 4.0
 github "Hearst-DD/ObjectMapper" ~> 2.0
 github "scalessec/Toast-Swift" ~> 2.0
 github "seedotlee/MJRefresh" "new-version"
-github "xmartlabs/Eureka" ~> 3.0.0
+github "xmartlabs/Eureka" ~> 3.0
+github "rs/SDWebImage" ~> 4.0

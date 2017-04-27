@@ -23,6 +23,10 @@ class C4MVTFirstController: C4MVTBaseController {
         return false
     }
 
+    override var needLoadingCover: Bool {
+        return false
+    }
+
     // MARK: - Funtions
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -52,7 +52,6 @@ class C4MVTThirdController: C4MVTBaseController {
 
     func logoutBtnPressed() {
         C4MVTAccountAgent.shared.logout()
-        C4MVTTabBarController.shared.removeLast()
     }
     
 }

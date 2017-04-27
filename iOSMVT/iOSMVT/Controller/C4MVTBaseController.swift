@@ -43,6 +43,10 @@ class C4MVTBaseController: UIViewController {
         return true
     }
 
+    var needLoadingCover: Bool {
+        return true
+    }
+
     var needRotate: Bool {
         return false
     }
@@ -74,8 +78,7 @@ class C4MVTBaseController: UIViewController {
     }()
 
     fileprivate lazy var loadingCoverView: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor.red
+        let view = C4MVTLoadingView()
         return view
     }()
 
@@ -162,6 +165,10 @@ class C4MVTBaseController: UIViewController {
     }
 
     fileprivate func setupLoadingCover() {
+        if !needLoadingCover {
+            return
+        }
+
         loadingCoverView.removeFromSuperview()
         view.addSubview(loadingCoverView)
         view.bringSubview(toFront: loadingCoverView)
@@ -219,7 +226,11 @@ class C4MVTBaseController: UIViewController {
     }
 
     func loadingSuccess() {
+        if !needLoadingCover {
+            return
+        }
         loadingCoverView.isHidden = true
+        loadingCoverView.removeFromSuperview()
     }
 
     func makeToast(_ msg: String) {
