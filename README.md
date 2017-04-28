@@ -30,3 +30,4 @@ carthage bootstrap --platform iOS --no-use-binaries --verbose
 * 0.5 mj refresh & loadmore demo
 * 0.6 add Eureka as form solution / maintabbar not allow rotate, other vc can be setting to rotate
 * 0.7 app icon / api loading animating suppoort / splash screen
+* 0.8 loading & reload view support / splash screen fix
