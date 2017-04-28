@@ -77,7 +77,7 @@ class C4MVTBaseController: UIViewController {
         return view
     }()
 
-    fileprivate lazy var loadingCoverView: UIView = {
+    fileprivate lazy var loadingCoverView: C4MVTLoadingView = {
         let view = C4MVTLoadingView()
         return view
     }()
@@ -176,6 +176,7 @@ class C4MVTBaseController: UIViewController {
             make.top.equalTo(navBarView.snp.bottom)
             make.leading.trailing.bottom.equalToSuperview()
         }
+        loadingCoverView.delegate = self
     }
 
     fileprivate func setupMain() {
@@ -221,8 +222,14 @@ class C4MVTBaseController: UIViewController {
         fatalError("sub-class must override loading()")
     }
 
-    func loadingFailed() {
+    func reloading() {
+        loading()
+    }
 
+    func loadingFailed() {
+        if needLoadingCover {
+            loadingCoverView.switch2FailMode()
+        }
     }
 
     func loadingSuccess() {
@@ -245,6 +252,16 @@ class C4MVTBaseController: UIViewController {
         view.hideToastActivity()
     }
 
+}
+
+// MARK: - C4MVTLoadingViewDelegate
+extension C4MVTBaseController: C4MVTLoadingViewDelegate {
+    func loadingViewDidPressFailButton(_ view: C4MVTLoadingView) {
+        if needLoadingCover {
+            loadingCoverView.switch2LoadingMode()
+        }
+        reloading()
+    }
 }
 
 // MARK: - C4MVTNavBarViewDelegate

@@ -13,6 +13,10 @@ class C4MVTLoginApi: C4MVTBaseApi {
     fileprivate var userName: String
     fileprivate var passHash: String
 
+    override var shouldLogoutOn401: Bool {
+        return false
+    }
+
     init(userName: String,
          passHash: String) {
         self.userName = userName

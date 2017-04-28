@@ -45,6 +45,19 @@ class C4MVTSecondFormController: C4MVTFormViewController {
                 }.onCellSelection({ (cell, row) in
                     self.navigationController?.pushViewController(C4MVTRotateDemoController(), animated: true)
                 })
+
+            +++ Section("Api Demo")
+            <<< ButtonRow("Need Auth Api demo") {
+                $0.title = $0.tag
+                }.onCellSelection({ (cell, row) in
+                    self.navigationController?.pushViewController(C4MVTNeedAuthApiDemoController(), animated: true)
+                })
+            <<< ButtonRow("No Need Auth Api demo") {
+                $0.title = $0.tag
+                }.onCellSelection({ (cell, row) in
+                    // self.navigationController?.pushViewController(C4MVTRotateDemoController(), animated: true)
+                })
+
     }
 }
 

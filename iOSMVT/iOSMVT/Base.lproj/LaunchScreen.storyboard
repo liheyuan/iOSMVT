@@ -24,8 +24,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="v6t-ic-7ZD">
                                 <rect key="frame" x="29.5" y="278" width="315" height="111"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="https://github.com/liheyuan/iOSMVT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bv-8F-VWJ">
-                                <rect key="frame" x="48" y="419" width="279" height="19.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://github.com/liheyuan/iOSMVT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bv-8F-VWJ">
+                                <rect key="frame" x="55.5" y="419" width="264.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -34,6 +34,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="v6t-ic-7ZD" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="BTo-GX-qUN"/>
+                            <constraint firstItem="6bv-8F-VWJ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="BqA-ru-VV1"/>
                             <constraint firstItem="v6t-ic-7ZD" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Svl-FY-a60"/>
                             <constraint firstItem="6bv-8F-VWJ" firstAttribute="top" secondItem="v6t-ic-7ZD" secondAttribute="bottom" constant="30" id="dGg-bu-jd7"/>
                         </constraints>

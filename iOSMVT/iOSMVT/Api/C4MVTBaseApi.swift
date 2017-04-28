@@ -57,6 +57,10 @@ class C4MVTBaseApi: NSObject {
     var statusCode: Int = 0
     fileprivate var request: DataRequest? = nil
 
+    var shouldLogoutOn401: Bool {
+        return true
+    }
+
     // MARK: - Funtion for call
     func start() {
         startWithCallback()
@@ -110,6 +114,9 @@ class C4MVTBaseApi: NSObject {
                             switch reason {
                             case .unacceptableStatusCode(let responseCode):
                                 err = .responseCodeError(code: responseCode)
+                                if self.shouldLogoutOn401 && responseCode == 401 {
+                                    C4MVTAccountAgent.shared.logout()
+                                }
                             default:
                                 err = .responseError
                             }
