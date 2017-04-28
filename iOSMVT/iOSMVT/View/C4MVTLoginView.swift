@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import ToastSwiftFramework
 
-class C4MVTLoginView: UIView {
+class C4MVTLoginView: C4MVTUIView {
 
     // MARK: - UI Getter
     fileprivate lazy var logoImageView: UIImageView = {
@@ -87,10 +87,9 @@ class C4MVTLoginView: UIView {
 
     func loginBtnPressed() {
         C4MVTAccountAgent.shared.login(user: usernameField.text ?? "",
-                                       pass: passwordField.text ?? "") { (succ) in
-                                        if succ {
-
-                                        }
+                                       pass: passwordField.text ?? "",
+                                       animatingTarget: self) { (succ) in
+                                        self.makeToast(succ ? "Login success" : "Login failed")
         }
     }
 

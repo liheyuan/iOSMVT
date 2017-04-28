@@ -41,6 +41,7 @@
 		E0B3C2F51EB087AD000A7B4F /* Eureka.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0B3C2F41EB087AD000A7B4F /* Eureka.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E0B3C30E1EB09E0A000A7B4F /* C4MVTFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B3C30D1EB09E0A000A7B4F /* C4MVTFormViewController.swift */; };
 		E0BF5E4A1EA1BFD100DCAC22 /* C4MVTLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BF5E491EA1BFD100DCAC22 /* C4MVTLoginView.swift */; };
+		E0D106E11EB31AF3003755F9 /* C4MVTUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D106E01EB31AF3003755F9 /* C4MVTUIView.swift */; };
 		E0D6BD081EAF35A600725D42 /* MJRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0D6BD071EAF35A600725D42 /* MJRefresh.framework */; };
 		E0D6BD091EAF35A600725D42 /* MJRefresh.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0D6BD071EAF35A600725D42 /* MJRefresh.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E0DD1A7A1EA4E562008062F6 /* C4MVTAccountAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DD1A791EA4E562008062F6 /* C4MVTAccountAgent.swift */; };
@@ -135,6 +136,7 @@
 		E0B3C2F41EB087AD000A7B4F /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = Carthage/Build/iOS/Eureka.framework; sourceTree = "<group>"; };
 		E0B3C30D1EB09E0A000A7B4F /* C4MVTFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTFormViewController.swift; path = Controller/C4MVTFormViewController.swift; sourceTree = "<group>"; };
 		E0BF5E491EA1BFD100DCAC22 /* C4MVTLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTLoginView.swift; path = View/C4MVTLoginView.swift; sourceTree = "<group>"; };
+		E0D106E01EB31AF3003755F9 /* C4MVTUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTUIView.swift; path = View/C4MVTUIView.swift; sourceTree = "<group>"; };
 		E0D6BD071EAF35A600725D42 /* MJRefresh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MJRefresh.framework; path = Carthage/Build/iOS/MJRefresh.framework; sourceTree = "<group>"; };
 		E0DD1A791EA4E562008062F6 /* C4MVTAccountAgent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTAccountAgent.swift; path = Agent/C4MVTAccountAgent.swift; sourceTree = "<group>"; };
 		E0DD1A7B1EA4EF54008062F6 /* C4MVTLoginApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTLoginApi.swift; path = Api/C4MVTLoginApi.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				E0BF5E491EA1BFD100DCAC22 /* C4MVTLoginView.swift */,
 				E0E073A91EA237F100D2D1E7 /* C4MVTTextField.swift */,
 				E03BE8851EB1F06F00673052 /* C4MVTLoadingView.swift */,
+				E0D106E01EB31AF3003755F9 /* C4MVTUIView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 				E08085871E9E3F6D00FD2CA9 /* C4MVTHostConst.swift in Sources */,
 				E08473261EA77CF00052F4E6 /* C4MVTFirstController.swift in Sources */,
 				E01A4DE91E95FA6E00626F3C /* C4MVTGlobalConst.swift in Sources */,
+				E0D106E11EB31AF3003755F9 /* C4MVTUIView.swift in Sources */,
 				E03BE88F1EB1FC8E00673052 /* C4MVTRotateDemoController.swift in Sources */,
 				E03BE8861EB1F06F00673052 /* C4MVTLoadingView.swift in Sources */,
 				E08473201EA75F6A0052F4E6 /* C4MVTNSObjectNotification.swift in Sources */,

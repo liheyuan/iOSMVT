@@ -27,7 +27,8 @@ class C4MVTAccountAgent: NSObject {
 
     func login(user: String,
                pass: String,
-               succ: ((Bool) -> Void)?) {
+               animatingTarget: C4MVTBaseApiAnimatingTarget? = nil,
+               succ: ((Bool) -> Void)? = nil) {
         guard let passHash: String = C4MVTHashUtil.sha256("C4MVT_\(pass)")?.lowercased() else {
             succ?(false)
             return
@@ -35,20 +36,12 @@ class C4MVTAccountAgent: NSObject {
 
         let api = C4MVTLoginApi(userName: user,
                                 passHash: passHash)
+        api.animatingTarget = animatingTarget
         api.startWithCallback(succ: { 
             // succ
             succ?(true)
 
             self.c4mvt_postNotification(name: C4MVTNotificationConst.LoginSuccess, userInfo: nil)
-
-            /*
-            let api2 = C4MVTNeedAuthApi()
-            api2.startWithCallback(succ: {
-                debugPrint("needauthapi succ")
-            }) { errType in
-                debugPrint("needauthapi fail")
-            }
- */
 
         }) { (errType) in
             // fail

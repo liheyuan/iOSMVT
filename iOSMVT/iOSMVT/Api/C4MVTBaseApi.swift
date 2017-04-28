@@ -43,21 +43,34 @@ protocol C4MVTBaseApiDelegate: NSObjectProtocol {
     func requestSuccess(api: C4MVTBaseApi)
 }
 
+protocol C4MVTBaseApiAnimatingTarget: NSObjectProtocol {
+    func startAnimating()
+    func stopAnimating()
+}
+
 class C4MVTBaseApi: NSObject {
 
     // MARK: - Property
     weak var delegate: C4MVTBaseApiDelegate? = nil
+    weak var animatingTarget: C4MVTBaseApiAnimatingTarget? = nil
     var responseString: String = ""
     var statusCode: Int = 0
+    fileprivate var request: DataRequest? = nil
 
     // MARK: - Funtion for call
     func start() {
         startWithCallback()
     }
 
+    func cancel() {
+        request?.cancel()
+        request = nil
+    }
+
     func startWithCallback(succ: (() -> Void)? = nil,
                            fail: ((C4MVTApiErrorType) -> Void)? = nil) {
-        let request = Alamofire.request(getRequestUrl(),
+        animatingTarget?.startAnimating()
+        request = Alamofire.request(getRequestUrl(),
                           method: getRequestMethod(),
                           parameters: requestParameters(),
                           encoding: getRequestEncoding(),
@@ -65,6 +78,8 @@ class C4MVTBaseApi: NSObject {
             .validate(statusCode: 200..<300)
             .validate(contentType: ["application/json"])
             .responseString(completionHandler: { (response) in
+
+                self.animatingTarget?.stopAnimating()
 
                 self.statusCode = response.response?.statusCode ?? 0
 
@@ -113,8 +128,10 @@ class C4MVTBaseApi: NSObject {
                 }
         })
 
-        // debug
-        debugPrint(request)
+        if let r = request {
+            // debug
+            debugPrint(r)
+        }
     }
 
     func mapToObject<T: Mappable>() -> T? {
