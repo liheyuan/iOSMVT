@@ -51,6 +51,10 @@ class C4MVTBaseController: UIViewController {
         return false
     }
 
+    var needPopGesture: Bool {
+        return true
+    }
+
     fileprivate var isLogin: Bool
 
     // MARK: - Property for Orientation
