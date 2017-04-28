@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,22 +22,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="v6t-ic-7ZD">
-                                <rect key="frame" x="29.5" y="278" width="315" height="111"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://github.com/liheyuan/iOSMVT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bv-8F-VWJ">
-                                <rect key="frame" x="55.5" y="419" width="264.5" height="19.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8k-eg-9GD">
+                                <rect key="frame" x="16" y="248" width="343" height="141"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="v6t-ic-7ZD">
+                                        <rect key="frame" x="14" y="0.0" width="315" height="111"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://github.com/liheyuan/iOSMVT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bv-8F-VWJ" userLabel="Label">
+                                        <rect key="frame" x="39" y="121" width="265" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="6bv-8F-VWJ" secondAttribute="bottom" id="8h8-2x-coy"/>
+                                    <constraint firstItem="6bv-8F-VWJ" firstAttribute="centerX" secondItem="o8k-eg-9GD" secondAttribute="centerX" id="GX7-Ad-KaK"/>
+                                    <constraint firstItem="v6t-ic-7ZD" firstAttribute="centerX" secondItem="o8k-eg-9GD" secondAttribute="centerX" id="O1n-Or-LoW"/>
+                                    <constraint firstItem="6bv-8F-VWJ" firstAttribute="top" secondItem="v6t-ic-7ZD" secondAttribute="bottom" constant="10" id="RuX-eQ-d79"/>
+                                    <constraint firstItem="v6t-ic-7ZD" firstAttribute="top" secondItem="o8k-eg-9GD" secondAttribute="top" id="lNa-a2-FKs"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="v6t-ic-7ZD" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="BTo-GX-qUN"/>
-                            <constraint firstItem="6bv-8F-VWJ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="BqA-ru-VV1"/>
-                            <constraint firstItem="v6t-ic-7ZD" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Svl-FY-a60"/>
-                            <constraint firstItem="6bv-8F-VWJ" firstAttribute="top" secondItem="v6t-ic-7ZD" secondAttribute="bottom" constant="30" id="dGg-bu-jd7"/>
+                            <constraint firstItem="o8k-eg-9GD" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Amr-jq-1XL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="o8k-eg-9GD" secondAttribute="trailing" id="DSC-9K-6SM"/>
+                            <constraint firstItem="o8k-eg-9GD" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="RiJ-Xq-Icq"/>
+                            <constraint firstItem="o8k-eg-9GD" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-15" id="ZvL-5o-Q6Y"/>
                         </constraints>
                     </view>
                 </viewController>
