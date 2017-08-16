@@ -55,7 +55,7 @@ class C4MVTSecondFormController: C4MVTFormViewController {
             <<< ButtonRow("No Need Auth Api demo") {
                 $0.title = $0.tag
                 }.onCellSelection({ (cell, row) in
-                    // self.navigationController?.pushViewController(C4MVTRotateDemoController(), animated: true)
+                    self.navigationController?.pushViewController(C4MVTNoNeedAuthApiDemoController(), animated: true)
                 })
 
     }

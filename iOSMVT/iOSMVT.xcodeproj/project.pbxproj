@@ -22,6 +22,8 @@
 		E01A4E211E963BF400626F3C /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E01A4E201E963BF400626F3C /* SnapKit.framework */; };
 		E01A4E221E963BF400626F3C /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E01A4E201E963BF400626F3C /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E01F504B1E9F80AD00CA23EC /* SampleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01F504A1E9F80AD00CA23EC /* SampleObject.swift */; };
+		E03112671F441697005E915F /* C4MVTNoNeedAuthApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03112661F441697005E915F /* C4MVTNoNeedAuthApi.swift */; };
+		E03112691F4416FA005E915F /* C4MVTNoNeedAuthApiDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03112681F4416FA005E915F /* C4MVTNoNeedAuthApiDemoController.swift */; };
 		E03BE8801EB1EA9B00673052 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03BE87E1EB1EA8100673052 /* SDWebImage.framework */; };
 		E03BE8811EB1EA9B00673052 /* SDWebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E03BE87E1EB1EA8100673052 /* SDWebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E03BE8861EB1F06F00673052 /* C4MVTLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03BE8851EB1F06F00673052 /* C4MVTLoadingView.swift */; };
@@ -122,6 +124,8 @@
 		E01A4E1E1E96368B00626F3C /* C4MVTBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTBaseController.swift; path = Controller/C4MVTBaseController.swift; sourceTree = "<group>"; };
 		E01A4E201E963BF400626F3C /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		E01F504A1E9F80AD00CA23EC /* SampleObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SampleObject.swift; path = DataObject/SampleObject.swift; sourceTree = "<group>"; };
+		E03112661F441697005E915F /* C4MVTNoNeedAuthApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTNoNeedAuthApi.swift; path = Api/C4MVTNoNeedAuthApi.swift; sourceTree = "<group>"; };
+		E03112681F4416FA005E915F /* C4MVTNoNeedAuthApiDemoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTNoNeedAuthApiDemoController.swift; path = Controller/C4MVTNoNeedAuthApiDemoController.swift; sourceTree = "<group>"; };
 		E03BE87E1EB1EA8100673052 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
 		E03BE8851EB1F06F00673052 /* C4MVTLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTLoadingView.swift; path = View/C4MVTLoadingView.swift; sourceTree = "<group>"; };
 		E03BE88A1EB1F1EA00673052 /* Loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = Loading.gif; path = Resource/Loading.gif; sourceTree = "<group>"; };
@@ -273,6 +277,7 @@
 				E03BE88C1EB1FA5000673052 /* C4MVTLoadingDemoController.swift */,
 				E03BE88E1EB1FC8E00673052 /* C4MVTRotateDemoController.swift */,
 				E0D106E21EB3304E003755F9 /* C4MVTNeedAuthApiDemoController.swift */,
+				E03112681F4416FA005E915F /* C4MVTNoNeedAuthApiDemoController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -350,6 +355,7 @@
 				E0F8EC471E9C692B0094A085 /* C4MVTExampleApi.swift */,
 				E0DD1A7B1EA4EF54008062F6 /* C4MVTLoginApi.swift */,
 				E09C29061EA627900043DC96 /* C4MVTNeedAuthApi.swift */,
+				E03112661F441697005E915F /* C4MVTNoNeedAuthApi.swift */,
 			);
 			name = Api;
 			sourceTree = "<group>";
@@ -538,6 +544,7 @@
 				E01A4E1F1E96368B00626F3C /* C4MVTBaseController.swift in Sources */,
 				E01A4DE11E95FA3E00626F3C /* C4MVTUIViewControllerExtension.swift in Sources */,
 				E01F504B1E9F80AD00CA23EC /* SampleObject.swift in Sources */,
+				E03112691F4416FA005E915F /* C4MVTNoNeedAuthApiDemoController.swift in Sources */,
 				E01A4DE61E95FA6200626F3C /* C4MVTSecondController.swift in Sources */,
 				E0E073AA1EA237F100D2D1E7 /* C4MVTTextField.swift in Sources */,
 				E0D106E31EB3304E003755F9 /* C4MVTNeedAuthApiDemoController.swift in Sources */,
@@ -549,6 +556,7 @@
 				E03BE88D1EB1FA5000673052 /* C4MVTLoadingDemoController.swift in Sources */,
 				E0DD1A811EA4F11D008062F6 /* C4MVTHashUtil.swift in Sources */,
 				E08085871E9E3F6D00FD2CA9 /* C4MVTHostConst.swift in Sources */,
+				E03112671F441697005E915F /* C4MVTNoNeedAuthApi.swift in Sources */,
 				E08473261EA77CF00052F4E6 /* C4MVTFirstController.swift in Sources */,
 				E01A4DE91E95FA6E00626F3C /* C4MVTGlobalConst.swift in Sources */,
 				E0D106E11EB31AF3003755F9 /* C4MVTUIView.swift in Sources */,
