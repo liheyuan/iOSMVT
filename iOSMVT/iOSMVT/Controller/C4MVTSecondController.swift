@@ -21,6 +21,11 @@ class C4MVTSecondFormController: C4MVTFormViewController {
             }.onCellSelection({ (cell, row) in
                 self.navigationController?.pushViewController(C4MVTMJDemoController(), animated: true)
             })
+            <<< ButtonRow("FD UITableView Template") {
+                $0.title = $0.tag
+                }.onCellSelection({ (cell, row) in
+                    self.navigationController?.pushViewController(C4MVTFDDemoController(), animated: true)
+            })
 
             +++ Section("Dynamic Tab Demo")
             <<< ButtonRow("Add Last Tab") {

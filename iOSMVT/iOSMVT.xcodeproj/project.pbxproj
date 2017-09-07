@@ -24,6 +24,9 @@
 		E01F504B1E9F80AD00CA23EC /* SampleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01F504A1E9F80AD00CA23EC /* SampleObject.swift */; };
 		E03112671F441697005E915F /* C4MVTNoNeedAuthApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03112661F441697005E915F /* C4MVTNoNeedAuthApi.swift */; };
 		E03112691F4416FA005E915F /* C4MVTNoNeedAuthApiDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03112681F4416FA005E915F /* C4MVTNoNeedAuthApiDemoController.swift */; };
+		E03611031F61515E00CD9684 /* FDTemplateLayoutCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03611021F61515E00CD9684 /* FDTemplateLayoutCell.framework */; };
+		E03611041F61515E00CD9684 /* FDTemplateLayoutCell.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E03611021F61515E00CD9684 /* FDTemplateLayoutCell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E03611061F6152C100CD9684 /* C4MVTFDDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03611051F6152C100CD9684 /* C4MVTFDDemoController.swift */; };
 		E03BE8801EB1EA9B00673052 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03BE87E1EB1EA8100673052 /* SDWebImage.framework */; };
 		E03BE8811EB1EA9B00673052 /* SDWebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E03BE87E1EB1EA8100673052 /* SDWebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E03BE8861EB1F06F00673052 /* C4MVTLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03BE8851EB1F06F00673052 /* C4MVTLoadingView.swift */; };
@@ -95,6 +98,7 @@
 				E01A4E221E963BF400626F3C /* SnapKit.framework in Embed Frameworks */,
 				E03BE8811EB1EA9B00673052 /* SDWebImage.framework in Embed Frameworks */,
 				E0EFE4A71E9E2CF800D1949F /* Alamofire.framework in Embed Frameworks */,
+				E03611041F61515E00CD9684 /* FDTemplateLayoutCell.framework in Embed Frameworks */,
 				E08473291EA783E60052F4E6 /* ToastSwiftFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -126,6 +130,8 @@
 		E01F504A1E9F80AD00CA23EC /* SampleObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SampleObject.swift; path = DataObject/SampleObject.swift; sourceTree = "<group>"; };
 		E03112661F441697005E915F /* C4MVTNoNeedAuthApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTNoNeedAuthApi.swift; path = Api/C4MVTNoNeedAuthApi.swift; sourceTree = "<group>"; };
 		E03112681F4416FA005E915F /* C4MVTNoNeedAuthApiDemoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTNoNeedAuthApiDemoController.swift; path = Controller/C4MVTNoNeedAuthApiDemoController.swift; sourceTree = "<group>"; };
+		E03611021F61515E00CD9684 /* FDTemplateLayoutCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FDTemplateLayoutCell.framework; path = Carthage/Build/iOS/FDTemplateLayoutCell.framework; sourceTree = "<group>"; };
+		E03611051F6152C100CD9684 /* C4MVTFDDemoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTFDDemoController.swift; path = Controller/C4MVTFDDemoController.swift; sourceTree = "<group>"; };
 		E03BE87E1EB1EA8100673052 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
 		E03BE8851EB1F06F00673052 /* C4MVTLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTLoadingView.swift; path = View/C4MVTLoadingView.swift; sourceTree = "<group>"; };
 		E03BE88A1EB1F1EA00673052 /* Loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = Loading.gif; path = Resource/Loading.gif; sourceTree = "<group>"; };
@@ -173,6 +179,7 @@
 				E0EFE4A61E9E2CF800D1949F /* Alamofire.framework in Frameworks */,
 				E03BE8801EB1EA9B00673052 /* SDWebImage.framework in Frameworks */,
 				E08473281EA783E60052F4E6 /* ToastSwiftFramework.framework in Frameworks */,
+				E03611031F61515E00CD9684 /* FDTemplateLayoutCell.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +285,7 @@
 				E03BE88E1EB1FC8E00673052 /* C4MVTRotateDemoController.swift */,
 				E0D106E21EB3304E003755F9 /* C4MVTNeedAuthApiDemoController.swift */,
 				E03112681F4416FA005E915F /* C4MVTNoNeedAuthApiDemoController.swift */,
+				E03611051F6152C100CD9684 /* C4MVTFDDemoController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -337,6 +345,7 @@
 		E05842BD1E97C48600F47023 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E03611021F61515E00CD9684 /* FDTemplateLayoutCell.framework */,
 				E03BE87E1EB1EA8100673052 /* SDWebImage.framework */,
 				E0B3C2F41EB087AD000A7B4F /* Eureka.framework */,
 				E0D6BD071EAF35A600725D42 /* MJRefresh.framework */,
@@ -522,6 +531,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/MJRefresh.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Eureka.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SDWebImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FDTemplateLayoutCell.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
@@ -568,6 +578,7 @@
 				E05842021E97489200F47023 /* C4MVTNavBarView.swift in Sources */,
 				E01A4DED1E95FA7900626F3C /* AppDelegate.swift in Sources */,
 				E01A4DEA1E95FA6E00626F3C /* C4MVTUIColorConst.swift in Sources */,
+				E03611061F6152C100CD9684 /* C4MVTFDDemoController.swift in Sources */,
 				E0D106E51EB330DF003755F9 /* C4MVTNeedAuthObject.swift in Sources */,
 				E0EB44871EB0A87100B187CB /* C4MVTNavigationController.swift in Sources */,
 				E0D107001EB3511E003755F9 /* C4MVTPageCenterControl.swift in Sources */,

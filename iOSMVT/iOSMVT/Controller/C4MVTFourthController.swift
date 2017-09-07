@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FDTemplateLayoutCell
 
 class C4MVTFourthController: C4MVTBaseController {
 
