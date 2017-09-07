@@ -27,6 +27,7 @@
 		E03611031F61515E00CD9684 /* FDTemplateLayoutCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03611021F61515E00CD9684 /* FDTemplateLayoutCell.framework */; };
 		E03611041F61515E00CD9684 /* FDTemplateLayoutCell.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E03611021F61515E00CD9684 /* FDTemplateLayoutCell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E03611061F6152C100CD9684 /* C4MVTFDDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03611051F6152C100CD9684 /* C4MVTFDDemoController.swift */; };
+		E03611091F61556300CD9684 /* FDDemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03611081F61556300CD9684 /* FDDemoCell.swift */; };
 		E03BE8801EB1EA9B00673052 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03BE87E1EB1EA8100673052 /* SDWebImage.framework */; };
 		E03BE8811EB1EA9B00673052 /* SDWebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E03BE87E1EB1EA8100673052 /* SDWebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E03BE8861EB1F06F00673052 /* C4MVTLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03BE8851EB1F06F00673052 /* C4MVTLoadingView.swift */; };
@@ -132,6 +133,7 @@
 		E03112681F4416FA005E915F /* C4MVTNoNeedAuthApiDemoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTNoNeedAuthApiDemoController.swift; path = Controller/C4MVTNoNeedAuthApiDemoController.swift; sourceTree = "<group>"; };
 		E03611021F61515E00CD9684 /* FDTemplateLayoutCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FDTemplateLayoutCell.framework; path = Carthage/Build/iOS/FDTemplateLayoutCell.framework; sourceTree = "<group>"; };
 		E03611051F6152C100CD9684 /* C4MVTFDDemoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTFDDemoController.swift; path = Controller/C4MVTFDDemoController.swift; sourceTree = "<group>"; };
+		E03611081F61556300CD9684 /* FDDemoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FDDemoCell.swift; path = View/Cell/FDDemoCell.swift; sourceTree = "<group>"; };
 		E03BE87E1EB1EA8100673052 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
 		E03BE8851EB1F06F00673052 /* C4MVTLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTLoadingView.swift; path = View/C4MVTLoadingView.swift; sourceTree = "<group>"; };
 		E03BE88A1EB1F1EA00673052 /* Loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = Loading.gif; path = Resource/Loading.gif; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 		E01A4DDA1E95FA0E00626F3C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E03611071F61553300CD9684 /* Cell */,
 				E05842011E97489200F47023 /* C4MVTNavBarView.swift */,
 				E0BF5E491EA1BFD100DCAC22 /* C4MVTLoginView.swift */,
 				E0E073A91EA237F100D2D1E7 /* C4MVTTextField.swift */,
@@ -332,6 +335,14 @@
 				E0D106E41EB330DF003755F9 /* C4MVTNeedAuthObject.swift */,
 			);
 			name = DataObject;
+			sourceTree = "<group>";
+		};
+		E03611071F61553300CD9684 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E03611081F61556300CD9684 /* FDDemoCell.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		E03BE8891EB1F1CA00673052 /* Resource */ = {
@@ -556,6 +567,7 @@
 				E01F504B1E9F80AD00CA23EC /* SampleObject.swift in Sources */,
 				E03112691F4416FA005E915F /* C4MVTNoNeedAuthApiDemoController.swift in Sources */,
 				E01A4DE61E95FA6200626F3C /* C4MVTSecondController.swift in Sources */,
+				E03611091F61556300CD9684 /* FDDemoCell.swift in Sources */,
 				E0E073AA1EA237F100D2D1E7 /* C4MVTTextField.swift in Sources */,
 				E0D106E31EB3304E003755F9 /* C4MVTNeedAuthApiDemoController.swift in Sources */,
 				E08473241EA77C290052F4E6 /* C4MVTThirdController.swift in Sources */,

@@ -12,6 +12,7 @@ The ui and logic are reduced to minimal, just to show Minimum viable technology 
 * Refresh & LoadMore: MJRefresh
 * Toast: ToastSwift 
 * Form: Eureka
+* UITableView Height: FDUITableViewTemplate
 
 ## How to run
 ```
@@ -31,3 +32,4 @@ carthage bootstrap --platform iOS --no-use-binaries --verbose
 * 0.6 add Eureka as form solution / maintabbar not allow rotate, other vc can be setting to rotate
 * 0.7 app icon / api loading animating suppoort / splash screen
 * 0.8 loading & reload view support / splash screen fix
+* 0.9 fd uitableview template layout demo 
