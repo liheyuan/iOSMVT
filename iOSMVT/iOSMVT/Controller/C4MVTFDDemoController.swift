@@ -11,7 +11,7 @@ import FDTemplateLayoutCell
 
 class C4MVTFDDemoController: C4MVTBaseController {
     // MARK: - Property
-    fileprivate var lines: Int = 20
+    fileprivate var lines: Int = 100
 
     fileprivate var cellIdentifier: String = "cell"
 
@@ -31,6 +31,7 @@ class C4MVTFDDemoController: C4MVTBaseController {
     fileprivate lazy var tableView: UITableView = {
         let tv = UITableView()
         tv.tableFooterView = UIView()
+        tv.separatorStyle = .none
         return tv
     }()
 
@@ -81,7 +82,10 @@ class C4MVTFDDemoController: C4MVTBaseController {
 
 // MARK: - UITableViewDelegate
 extension C4MVTFDDemoController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        makeToast("Click \(indexPath.row)")
+    }
 }
 
 // MARK: - UITableViewDataSource

@@ -22,6 +22,7 @@
 		E01A4E211E963BF400626F3C /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E01A4E201E963BF400626F3C /* SnapKit.framework */; };
 		E01A4E221E963BF400626F3C /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E01A4E201E963BF400626F3C /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E01F504B1E9F80AD00CA23EC /* SampleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01F504A1E9F80AD00CA23EC /* SampleObject.swift */; };
+		E021F5651F62A67A009A78AC /* SeperatorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E021F5641F62A67A009A78AC /* SeperatorUtil.swift */; };
 		E03112671F441697005E915F /* C4MVTNoNeedAuthApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03112661F441697005E915F /* C4MVTNoNeedAuthApi.swift */; };
 		E03112691F4416FA005E915F /* C4MVTNoNeedAuthApiDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03112681F4416FA005E915F /* C4MVTNoNeedAuthApiDemoController.swift */; };
 		E03611031F61515E00CD9684 /* FDTemplateLayoutCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03611021F61515E00CD9684 /* FDTemplateLayoutCell.framework */; };
@@ -129,6 +130,7 @@
 		E01A4E1E1E96368B00626F3C /* C4MVTBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTBaseController.swift; path = Controller/C4MVTBaseController.swift; sourceTree = "<group>"; };
 		E01A4E201E963BF400626F3C /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		E01F504A1E9F80AD00CA23EC /* SampleObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SampleObject.swift; path = DataObject/SampleObject.swift; sourceTree = "<group>"; };
+		E021F5641F62A67A009A78AC /* SeperatorUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeperatorUtil.swift; path = Util/SeperatorUtil.swift; sourceTree = "<group>"; };
 		E03112661F441697005E915F /* C4MVTNoNeedAuthApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTNoNeedAuthApi.swift; path = Api/C4MVTNoNeedAuthApi.swift; sourceTree = "<group>"; };
 		E03112681F4416FA005E915F /* C4MVTNoNeedAuthApiDemoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C4MVTNoNeedAuthApiDemoController.swift; path = Controller/C4MVTNoNeedAuthApiDemoController.swift; sourceTree = "<group>"; };
 		E03611021F61515E00CD9684 /* FDTemplateLayoutCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FDTemplateLayoutCell.framework; path = Carthage/Build/iOS/FDTemplateLayoutCell.framework; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				E0DD1A801EA4F11D008062F6 /* C4MVTHashUtil.swift */,
+				E021F5641F62A67A009A78AC /* SeperatorUtil.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -575,6 +578,7 @@
 				E0BF5E4A1EA1BFD100DCAC22 /* C4MVTLoginView.swift in Sources */,
 				E0B3C30E1EB09E0A000A7B4F /* C4MVTFormViewController.swift in Sources */,
 				E08473221EA761F80052F4E6 /* C4MVTNotificationConst.swift in Sources */,
+				E021F5651F62A67A009A78AC /* SeperatorUtil.swift in Sources */,
 				E03BE88D1EB1FA5000673052 /* C4MVTLoadingDemoController.swift in Sources */,
 				E0DD1A811EA4F11D008062F6 /* C4MVTHashUtil.swift in Sources */,
 				E08085871E9E3F6D00FD2CA9 /* C4MVTHostConst.swift in Sources */,

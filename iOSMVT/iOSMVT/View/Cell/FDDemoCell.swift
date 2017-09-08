@@ -57,6 +57,7 @@ class FDDemoCell: UITableViewCell {
         wrapView.addSubview(idLabel)
         wrapView.addSubview(nameLabel)
         wrapView.addSubview(contentLabel)
+        SeperatorUtil.addSeperator(to: wrapView, at: .bottom, leftPadding: 10)
 
         idLabel.snp.makeConstraints { (make) in
             make.leading.top.equalToSuperview().offset(padding)
@@ -70,6 +71,7 @@ class FDDemoCell: UITableViewCell {
         contentLabel.snp.makeConstraints { (make) in
             make.top.equalTo(idLabel.snp.bottom).offset(padding)
             make.centerX.bottom.equalToSuperview().offset(-padding)
+            make.leading.trailing.equalToSuperview().inset(padding)
         }
 
     }
