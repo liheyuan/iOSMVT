@@ -13,6 +13,13 @@ class FDDemoCell: UITableViewCell {
 
     fileprivate let padding: CGFloat = 10
 
+    fileprivate let Section1Color: UIColor = UIColor(rgbValue: 0x000000)
+
+    fileprivate let Section2Color: UIColor = UIColor(rgbValue: 0x00ff00)
+
+    fileprivate let Section3Color: UIColor = UIColor(rgbValue: 0x0000ff)
+
+
     fileprivate lazy var wrapView: UIView = {
         return UIView()
     }()
@@ -76,10 +83,27 @@ class FDDemoCell: UITableViewCell {
 
     }
 
-    func bindWith(id: String, name: String, content: String) {
+    func bindWith(id: String, name: String, content: String, section: Int = 0) {
         idLabel.text = id
         nameLabel.text = name
         contentLabel.text = content
+
+        switch section {
+        case 0:
+            idLabel.textColor = self.Section1Color
+            nameLabel.textColor = self.Section1Color
+            contentLabel.textColor = self.Section1Color
+        case 1:
+            idLabel.textColor = self.Section2Color
+            nameLabel.textColor = self.Section2Color
+            contentLabel.textColor = self.Section2Color
+        case 2:
+            idLabel.textColor = self.Section3Color
+            nameLabel.textColor = self.Section3Color
+            contentLabel.textColor = self.Section3Color
+        default:
+            break
+        }
     }
 
 }
